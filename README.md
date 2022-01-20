@@ -41,7 +41,7 @@ truffle compile
 
 # Set Port by ganache
 
-ganache-cli -p 8545
+ganache-cli -p 7545
 
 # DEPLOYMENT OF COCNTRACT
 truffle migrate -network development
