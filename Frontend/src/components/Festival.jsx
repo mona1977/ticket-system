@@ -1,7 +1,8 @@
+//Surendra Gupta
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import festivalFactory from '../proxies/FestivalFactory';
-import festToken from '../proxies/FestToken';
+import festToken from '../proxies/TicketToken';
 import FestivalNFT from '../proxies/FestivalNFT';
 import renderNotification from '../utils/notification-handler';
 
@@ -20,7 +21,7 @@ class Festival extends Component {
 
     web3 = new Web3(window.ethereum);
   }
-
+//FASTIVAL EVENT CREATION
   onCreateFestival = async (e) => {
     try {
       e.preventDefault();

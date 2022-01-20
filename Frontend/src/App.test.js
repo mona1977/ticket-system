@@ -1,4 +1,4 @@
-// DEVELOPER : SURENDRA
+//Surendra Gupta
 import { render, screen } from '@testing-library/react';
 import App from './App';
 

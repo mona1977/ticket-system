@@ -1,5 +1,5 @@
 {
-  "name": "festive-tickets-SYSTEM",
+  "name": "ticket-management",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
@@ -7,10 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no process specified\" && exit 1"
   },
-  "author": "SURENDRA",
-  "license": "ISC",
+  "author": "SURENDRA GUPTA",
+  "license": "SURENDRA",
   "devDependencies": {
     "@openzeppelin/contracts": "^3.4.0"
   }

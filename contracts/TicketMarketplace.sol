@@ -1,16 +1,17 @@
-// SURENDRA GUPTA
+//Developer : Surendra Gupta
+//Date : 18-JAN-2021
 pragma solidity ^0.6.0;
 
 import "./FestivalNFT.sol";
-import "./FestToken.sol";
+import "./TicketToken.sol";
 
-contract FestivalMarketplace {
-    FestToken private _token;
+contract TicketMarketplace {
+    TicketToken private _token;
     FestivalNFT private _festival;
 
     address private _organiser;
 
-    constructor(FestToken token, FestivalNFT festival) public {
+    constructor(TicketToken token, FestivalNFT festival) public {
         _token = token;
         _festival = festival;
         _organiser = _festival.getOrganiser();
@@ -18,7 +19,7 @@ contract FestivalMarketplace {
 
     event Purchase(address indexed buyer, address seller, uint256 ticketId);
 
-    // Purchase tickets from the organiser directly
+    // Purchase Ticket from event owner
     function purchaseTicket() public {
         address buyer = msg.sender;
 
@@ -27,7 +28,7 @@ contract FestivalMarketplace {
         _festival.transferTicket(buyer);
     }
 
-    // Purchase ticket from the secondary market hosted by organiser
+    // Ticket for the 3rd party 
     function secondaryPurchase(uint256 ticketId) public {
         address seller = _festival.ownerOf(ticketId);
         address buyer = msg.sender;

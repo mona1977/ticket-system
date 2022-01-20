@@ -1,12 +1,12 @@
-// DEVELOPER : SURENDRA
+// surendra gupta
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import ReactNotification from 'react-notifications-component';
 import Web3 from 'web3';
-import Festival from './components/Festivalticket';
-import Purchase from './components/Purchaseticket';
-import MyTickets from './components/MyTicketsfast';
-import SecondaryMarket from './components/SecondaryMarketticket';
+import Festival from './components/Festival';
+import Purchase from './components/Purchase';
+import MyTickets from './components/MyTickets';
+import SecondaryMarket from './components/SecondaryMarket';
 
 class App extends Component {
 
@@ -48,13 +48,13 @@ class App extends Component {
           <ReactNotification />
           <nav style={{ padding: '0px 30px 0px 30px' }}>
             <div class="nav-wrapper" >
-              <a href="/buyTickets" class="brand-logo left">TICKET CENTER</a>
+              <a href="/buyTickets" class="brand-logo left">Ticket System</a>
               <ul class="right hide-on-med-and-down 10" >
                 <div>
                   <li> <Link to="/createFestival">Add Event</Link> </li>
-                  <li> <Link to="/buyTickets">Purchase Tickets</Link> </li>
-                  <li> <Link to="/market"> OtherParty Market</Link> </li>
-                  <li> <Link to="/tickets">Tickets Dashboard</Link> </li>
+                  <li> <Link to="/buyTickets">Buy New Tickets</Link> </li>
+                  <li> <Link to="/market">Other Market</Link> </li>
+                  <li> <Link to="/tickets">MyTickets</Link> </li>
                   <li >
                   </li>
                 </div>
@@ -64,10 +64,10 @@ class App extends Component {
           </nav>
 
           <Switch>
-            <Route path="/createFestival" component={Festivalticket} />
-            <Route path="/buyTickets" component={Purchaseticket} />
-            <Route path="/market" component={SecondaryMarketticket} />
-            <Route path="/tickets" component={MyTicketsfast} />
+            <Route path="/createFestival" component={Festival} />
+            <Route path="/buyTickets" component={Purchase} />
+            <Route path="/market" component={SecondaryMarket} />
+            <Route path="/tickets" component={MyTickets} />
           </Switch>
         </div>
 

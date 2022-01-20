@@ -1,3 +1,4 @@
+//Surendra Gupta
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import festivalFactory from '../proxies/FestivalFactory';

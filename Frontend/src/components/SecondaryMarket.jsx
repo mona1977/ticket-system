@@ -1,9 +1,10 @@
+//Surendra Gupta
 import React, { Component } from 'react';
 import Web3 from 'web3';
 import festivalFactory from '../proxies/FestivalFactory';
 import FestivalNFT from '../proxies/FestivalNFT';
-import FestivalMarketplace from '../proxies/FestivalMarketplace';
-import festToken from '../proxies/FestToken';
+import FestivalMarketplace from '../proxies/TicketsMarketplace';
+import festToken from '../proxies/TicketToken';
 import renderNotification from '../utils/notification-handler';
 
 let web3;
@@ -63,7 +64,7 @@ class SecondaryMarket extends Component {
       console.log('Error wile updating sale tickets', err);
     }
   }
-
+//PURCHASE TICKET LOGIC FOR GAS FEE
   onPurchaseTicket = async (ticketId, sellingPrice, initiator) => {
     try {
       const { marketplace } = this.state;

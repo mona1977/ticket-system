@@ -46,18 +46,9 @@ ganache-cli -p 8545
 # DEPLOYMENT OF COCNTRACT
 truffle migrate -network development
 
-### 1.6 Initializing Local HTTP Host and MetaMask:
-- If you haven't already installed MetaMask, please install it for your browser: https://metamask.io/download.html
-- If our webapp is just ran statically from a file, we can't interact with it through MetaMask. Therefore our webapp has to be hosted on a HTPP web server in order to interact with the plugin.
-- An easy node module is `http-server` to run an index file fast on localhost.
-- In this tutorial I am using the VS Code plugin:  `ritwickdey.liveserver`. If you're using  VS Code you can install it from the marketplace by searching for its name in the extensions marketplace. After installing this plugin, all you have to do is right-click in index.html and click 'Open with Live Server'. 
-
-### 1.7 Adding the accounts to MetaMask:
-- When MetaMask is open click the networks list and click on Localhost 7545.
-- Our open Ganache terminal displays accounts where we have sent FEST to, to the first addresses.
-- In MetaMask, Add an account by clicking on your accounts tab and clicking "Import account".
-- Next copy the first private key from the Ganache accounts list and import it.
-- To test the secondary marketplace funtionality throught the webapp I recommend to import the second account as well to trade tickets.
+1. Add one click login option using metamask and add public and private routes.
+2. Add option to burn the ERC721 token during check in.
+3. Add option to withdraw tickets from sale.
 
 ### 1.8 Ready to go!
 - Now you can buy tickets via the web app from the organizer. Test out the functionality and try to sell a ticket on the marketplace for an increased price and buying the same ticket from a different account.

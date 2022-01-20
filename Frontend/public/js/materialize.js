@@ -1,7 +1,5 @@
 /*!
- * Materialize v1.0.0 (http://materializecss.com)
- * Copyright 2014-2017 Materialize
- * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+Developer : surendra gupta
  */
 var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
@@ -13,7 +11,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/*! cash-dom 1.3.5, https://github.com/kenwheeler/cash @license MIT */
+
 (function (factory) {
   window.cash = factory();
 })(function () {
@@ -26,7 +24,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
   var noop = function () { },
     isFunction = function (item) {
-      // @see https://crbug.com/568448
+      
       return typeof item === typeof noop && item.call;
     },
     isString = function (item) {
@@ -71,7 +69,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return this;
     }
 
-    // If already a cash collection, don't do any further processing
+    
     if (selector.cash && selector !== win) {
       return selector;
     }
@@ -82,14 +80,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     if (isString(selector)) {
       elems = idMatch.test(selector) ?
-        // If an ID use the faster getElementById check
+    
         doc.getElementById(selector.slice(1)) : htmlMatch.test(selector) ?
-          // If HTML, parse it into real elements
+    
           parseHTML(selector) :
-          // else use `find`
+    
           find(selector, context);
 
-      // If function, use as shortcut for DOM ready
+    
     } else if (isFunction(selector)) {
       onReady(selector); return this;
     }
@@ -98,12 +96,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return this;
     }
 
-    // If a single DOM element is passed in or received via ID, return the single element
+    
     if (elems.nodeType || elems === win) {
       this[0] = elems;
       this.length = 1;
     } else {
-      // Treat like an array and loop through each item.
+    
       length = this.length = elems.length;
       for (; i < length; i++) {
         this[i] = elems[i];
@@ -1059,7 +1057,7 @@ var Component = function () {
   return Component;
 }();
 
-; // Required for Meteor package, the use of window prevents export by Meteor
+
 (function (window) {
   if (window.Package) {
     M = {};

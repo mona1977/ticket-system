@@ -1,4 +1,4 @@
-// DEVELOPER : SURENDRA
+// surendra gupta
 import Provider from './Provider';
 import { festivalNFTABI } from '../constants';
 

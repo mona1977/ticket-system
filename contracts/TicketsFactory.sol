@@ -1,11 +1,12 @@
-// SURENDRA GUPTA
+//Developer : Surendra Gupta
+//Date : 18-JAN-2021
 pragma solidity ^0.6.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./FestivalNFT.sol";
-import "./FestivalMarketplace.sol";
+import "./TicketMarketplace.sol";
 
-contract FestiveTicketsFactory is Ownable {
+contract TicketsFactory is Ownable {
     struct Festival {
         string festName;
         string festSymbol;
@@ -19,7 +20,7 @@ contract FestiveTicketsFactory is Ownable {
 
     event Created(address ntfAddress, address marketplaceAddress);
 
-    // New NFT for purchase
+    // Creates new NFT and a marketplace for its purchase
     function createNewFest(
         FestToken token,
         string memory festName,
@@ -36,7 +37,7 @@ contract FestiveTicketsFactory is Ownable {
                 msg.sender
             );
 
-        FestivalMarketplace newMarketplace =
+        TicketMarketplace newMarketplace =
             new FestivalMarketplace(token, newFest);
 
         address newFestAddress = address(newFest);
@@ -55,12 +56,12 @@ contract FestiveTicketsFactory is Ownable {
         return newFestAddress;
     }
 
-    // Get all active fests
+    // All fastivals
     function getActiveFests() public view returns (address[] memory) {
         return activeFests;
     }
 
-    // Get fest's details
+    // Fastival DETAILS
     function getFestDetails(address festAddress)
         public
         view

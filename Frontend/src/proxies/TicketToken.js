@@ -1,6 +1,6 @@
-// DEVELOPER : SURENDRA
+// surendra gupta
 import Provider from './Provider';
-import FestToken from '../smartcontract/contract/abi/FestToken.json';
+import FestToken from '../abi/contracts/FestToken.json';
 
 const provider = new Provider();
 
