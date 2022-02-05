@@ -1,5 +1,5 @@
 # Developer : Surendra Gupta
-# Date : 18-Jan-2022
+
 
 #Objective : 
 Develop Ticket system which work on the P2P blockchain platform , From this system trusted user can sell
